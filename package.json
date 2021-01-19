@@ -1,0 +1,24 @@
+{
+  "name": "actions",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "start": "bash go",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jduimovich/actions.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jduimovich/actions/issues"
+  },
+  "homepage": "https://github.com/jduimovich/actions#readme",
+  "dependencies": {
+    "@octokit/app": "^10.0.2",
+    "express": "^4.17.1"
+  }
+}

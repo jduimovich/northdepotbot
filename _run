@@ -1,0 +1,24 @@
+#!/bin/sh
+
+HOME=/home/john/web/actions.northdepot.ca
+LOG=/home/john/log/actions.northdepot.ca
+DATA=$HOME/html
+NAME=actions
+
+echo $HOME
+echo $DATA
+echo $LOG
+echo $name
+
+GT=$(docker ps -q -f name=$NAME)
+if [ -z "$GT" ]
+then
+echo not running $NAME
+docker rm $NAME
+else
+echo $NAME is running will stop and restart container
+docker stop $GT
+docker rm $NAME
+fi
+  
+docker run --restart always --name $NAME -d -p 8098:8080 -p 8099:8081 -v $DATA:/data -v $LOG:/log -v /etc/localtime:/etc/localtime:ro -i -t jduimovich/actions 

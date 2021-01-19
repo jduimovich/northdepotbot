@@ -1,0 +1,19 @@
+#used to launch the app in docker 
+# copy to directory called config, fill it in and it will be .gitignored
+# do not push container to public repo
+export APP_ID=
+export PRIVATE_KEY=$(cat config/pkey.pem)
+export CLIENT_ID=
+export CLIENT_SECRET=
+
+#support dev
+if [ -z $1 ]
+then
+node app.js
+else
+nodemon app.js
+exit 
+fi
+
+
+    

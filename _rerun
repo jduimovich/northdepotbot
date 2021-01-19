@@ -1,0 +1,4 @@
+#change 
+docker build  -t jduimovich/actions .
+cd /home/john/web/actions.northdepot.ca
+sh _run
